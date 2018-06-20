@@ -1,0 +1,63 @@
+
+<!Doctype html>
+ <head>
+  <title> employee Details</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src ="thirdParty/angular.min.js"></script>
+  <script src="js/main.js"></script>
+  <header>
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+   <div class="container">
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".menu2">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+       <span class="navbar-brand" href="#"><img src="img/nasa.png" width="35" height="40" alt="My Logo"></span>
+     </div>
+     <div class="navbar-collapse collapse menu2">
+
+     <ul class="nav navbar-nav navbar-right">
+       <li><a href="#id1">Link 1</a></li>
+       <li><a href="#id2">Link 2</a></li>
+       <li><a href="#id3">Link 3</a></li>
+       <li><a href="#id4">Link 4</a></li>
+     </ul>
+
+   </div><!--/.nav-collapse -->
+ </div>
+</div>
+  </header>
+ </head>
+
+ <body ng-app="myApp">
+ <div ng-controller="MyCtrl">
+   <div class="row">
+     <h2>Employee Details</h2>
+     <table style="width:80%">
+       <thead>
+         <tr>
+           <th>Company Name</th>
+           <th>Employee Name</th>
+            <th>Employee Id</th>
+            <th>Designatiosn</th>
+            <th>Salary</th>
+         </tr>
+       </thead>
+        <tbody>
+          <tr ng-repeat="data in empData">
+            <td>{{data.company}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.empId}}</td>
+            <td>{{data.designaton}}</td>
+            <td>{{data.salary}}</td>
+          </tr>
+        </tbody>
+     </table>
+   </div>
+</div>
+ </body>
+</html>
