@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src ="thirdParty/angular.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/get.js"></script>
   <header>
     <div class="navbar navbar-inverse navbar-static-top" role="navigation">
    <div class="container">
@@ -21,10 +21,10 @@
      <div class="navbar-collapse collapse menu2">
 
      <ul class="nav navbar-nav navbar-right">
-       <li><a href="#id1">Link 1</a></li>
-       <li><a href="#id2">Link 2</a></li>
-       <li><a href="#id3">Link 3</a></li>
-       <li><a href="#id4">Link 4</a></li>
+       <li><a href="#id1">getEmp</a></li>
+       <li><a href="html/post.html">postEmp</a></li>
+       <li><a href="#id3">updateEmp</a></li>
+       <li><a href="#id4">delEmp</a></li>
      </ul>
 
    </div><!--/.nav-collapse -->
@@ -33,8 +33,8 @@
   </header>
  </head>
 
- <body ng-app="myApp">
- <div ng-controller="MyCtrl">
+ <body ng-app="app.get">
+ <div ng-controller="getCtrl">
    <div class="row">
      <h2>Employee Details</h2>
      <table style="width:80%">
@@ -48,7 +48,7 @@
          </tr>
        </thead>
         <tbody>
-          <tr ng-repeat="data in empData">
+          <tr ng-repeat="data in employees">
             <td>{{data.company}}</td>
             <td>{{data.name}}</td>
             <td>{{data.empId}}</td>
@@ -57,6 +57,7 @@
           </tr>
         </tbody>
      </table>
+      <button type="button" class="btn btn-primary px-4" ng-click="getEmp()">GetData</button>
    </div>
 </div>
  </body>
